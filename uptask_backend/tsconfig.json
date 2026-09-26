@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "preserveSymlinks": true,
+        "preserveSymlinks": false,
         "outDir": "./dist",
         "rootDir": "./src",
         "lib": ["esnext"],
@@ -11,7 +11,7 @@
         "sourceMap": true,
         "esModuleInterop": true,
         "declaration": true,
-        "types": ["node"]
+        "types": ["node", "express"]
     },
     "include": ["src/**/*.ts"]
 }
