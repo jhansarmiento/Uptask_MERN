@@ -1,0 +1,22 @@
+# Variables de entorno (Contienen contraseñas, llaves de API, etc.)
+.env
+
+# Dependencias (Se pueden reinstalar, pesan mucho)
+node_modules/
+
+# Archivos del sistema operativo
+.DS_Store
+
+# Carpetas de compilación o build (Código generado automáticamente)
+dist/
+build/
+
+# Archivos de configuración de editores de código personales
+.vscode/
+.idea/
+
+# Archivos de registro (Logs)
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

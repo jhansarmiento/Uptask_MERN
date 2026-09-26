@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "preserveSymlinks": true,
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "lib": ["esnext"],
+        "target": "ESNext",
+        "moduleResolution": "NodeNext",
+        "module": "NodeNext",
+        "strict": false,
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "declaration": true,
+        "types": ["node"]
+    },
+    "include": ["src/**/*.ts"]
+}
