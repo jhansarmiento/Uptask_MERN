@@ -1,10 +1,15 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import connectDB from './config/db.js'
+import projectRoutes from './routes/projectRoutes.js'
 
 dotenv.config()
 
 connectDB()
-export const app = express()
+
+const app = express()
+
+// Routes
+app.use('/api/projects', projectRoutes)
 
 export default app

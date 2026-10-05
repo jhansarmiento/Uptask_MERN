@@ -10,7 +10,7 @@
         "strict": false,
         "sourceMap": true,
         "esModuleInterop": true,
-        "declaration": true,
+        "declaration": false,
         "types": ["node", "express"]
     },
     "include": ["src/**/*.ts"]

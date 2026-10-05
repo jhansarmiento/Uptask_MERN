@@ -1,8 +1,8 @@
-
+import type { Request, Response } from 'express'
 
 export class ProjectController {
 
-    static getAllProjects = async (req, res) => {
+    static getAllProjects = async (req: Request, res: Response) => {
         res.send('Showing all projects')
     }
 }
