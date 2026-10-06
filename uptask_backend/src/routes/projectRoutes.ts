@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { body } from 'express-validator'
+import { body, param } from 'express-validator'
 import { ProjectController } from '../controllers/ProjectController.js'
 import { handleInputErrors } from '../middleware/validation.js'
 
@@ -12,6 +12,13 @@ router.post('/',
     body('projectDescription').notEmpty().withMessage('Project description is required'),
     handleInputErrors,
     ProjectController.createProject)
+
 router.get('/', ProjectController.getAllProjects)
+
+router.get('/:id', 
+    param('id').isMongoId().withMessage('Invalid project ID'),
+    handleInputErrors,
+    ProjectController.getProjectById
+)
 
 export default router

@@ -22,4 +22,13 @@ export class ProjectController {
             res.status(500).send('Error fetching projects')
         }
     }
+    static getProjectById = async (req: Request, res: Response) => {
+        console.log(req.params)
+        try {
+            const project = await Project.findById(req.params.id)
+            res.json(project)
+        } catch (error) {
+            res.status(500).send('Error fetching project')
+        }
+    }
 }
