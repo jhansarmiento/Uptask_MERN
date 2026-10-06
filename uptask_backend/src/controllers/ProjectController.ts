@@ -15,6 +15,11 @@ export class ProjectController {
         }
     }
     static getAllProjects = async (req: Request, res: Response) => {
-        res.send('Showing all projects')
+        try {
+            const projects = await Project.find()
+            res.json(projects)
+        } catch (error) {
+            res.status(500).send('Error fetching projects')
+        }
     }
 }
