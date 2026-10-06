@@ -4,6 +4,7 @@ import { ProjectController } from '../controllers/ProjectController.js'
 const router: Router = Router()
 
 // Define your project routes here
+router.post('/', ProjectController.createProject)
 router.get('/', ProjectController.getAllProjects)
 
 export default router
