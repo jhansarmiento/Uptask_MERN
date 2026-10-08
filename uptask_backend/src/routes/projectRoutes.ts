@@ -1,11 +1,12 @@
 import { Router } from 'express'
 import { body, param } from 'express-validator'
 import { ProjectController } from '../controllers/ProjectController.js'
+import { TaskController } from '../controllers/TaskController.js'
 import { handleInputErrors } from '../middleware/validation.js'
 
 const router: Router = Router()
 
-// Define your project routes here
+// Project routes
 router.post('/', 
     body('projectName').notEmpty().withMessage('Project name is required'),
     body('clientName').notEmpty().withMessage('Client name is required'),    
@@ -35,5 +36,8 @@ router.delete('/:id',
     handleInputErrors,
     ProjectController.deleteProject
 )
+
+// Task routes
+router.post('/:projectId/tasks',TaskController.createTask)
 
 export default router

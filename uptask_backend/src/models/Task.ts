@@ -13,7 +13,7 @@ export interface ITask extends Document {
     name: string,
     description: string,
     status: TaskStatus,
-    project: Types.ObjectId, // Reference to the associated project
+    project: Types.ObjectId, 
 }
 
 const TaskSchema: Schema = new Schema({
@@ -35,7 +35,6 @@ const TaskSchema: Schema = new Schema({
     project: {
         type: Types.ObjectId,
         ref: 'Project',
-        required: true
     }
 }, {
     timestamps: true
